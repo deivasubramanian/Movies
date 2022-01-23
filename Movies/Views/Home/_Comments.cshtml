@@ -1,0 +1,14 @@
+﻿@using  Movies.Models;
+@model MovieViewModel 
+
+<div>
+      @foreach(var comment in Model.Comments)
+    {
+     
+         <b>@comment.Author</b>
+            <p>@comment.Text   </p>
+        <span>@comment.Date.ToString("dd/MM/yyyy hh:mm:ss")</span><br />
+    }
+
+</div>
+  

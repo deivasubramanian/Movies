@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using  Movies.Models;
+
+@model List<MovieViewModel> 
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="column">
+        <div class="card" >
+                  <h3>@item.Title</h3>
+                  <p>@item.Duration hours</p>
+                  <p>@item.Year</p>
+                  <hr class="content_separate"/>
+                  <div id="@item.MovieID">
+                         @Html.Partial("_Comments.cshtml",item)
+                      
+
+                  </div>
+                     <button type="button" class="fancybutton" data-movieID=@item.MovieID>Add comment</button>
+             </div>     
+       
+                
+      </div>
+    }
+ 
+</div>
+
