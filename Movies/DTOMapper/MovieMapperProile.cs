@@ -10,9 +10,6 @@ namespace Movies.DTOMapper
             CreateMap<Movie, MovieViewModel>();
             CreateMap<Comments, CommentsViewModel>().ReverseMap();
         }
-        //public List<MovieViewModel> MapMovies(List<Movie> moviesData)
-        //{
-        //    moviesData.se
-        //}
+
     }
 }

@@ -76,7 +76,7 @@ namespace DataLibrary
                         Title = "Don't look up",
                         Duration = 2,
                         Popularity = 1,
-                        Rating = 2,
+                        Rating = 3,
                       
 
                     },

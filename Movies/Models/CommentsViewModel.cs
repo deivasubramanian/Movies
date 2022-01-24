@@ -7,5 +7,6 @@
         public string Author { get; set; }
         public DateTime Date { get; set; }
         public int MovieID { get; set ; }
+
     }
 }

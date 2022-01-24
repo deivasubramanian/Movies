@@ -29,7 +29,11 @@ namespace Movies.Controllers
         {
             model.Date = DateTime.Now;
             var commentsDTO = _mapper.Map<CommentsViewModel, Comments>(model);
-            _movieRepository.UpdateMovieComment(commentsDTO);
+            bool success =_movieRepository.UpdateMovieComment(commentsDTO);
+            if (!success)
+            {
+                _logger.LogError("Failed to save data");
+            }
             var movie = _movieRepository.GetMovie(model.MovieID);
             var movieViewModel = _mapper.Map<Movie, MovieViewModel>(movie);
 
