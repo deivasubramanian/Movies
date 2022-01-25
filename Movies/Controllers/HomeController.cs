@@ -19,8 +19,6 @@ namespace Movies.Controllers
             _logger = logger;
             _movieRepository = repository;
             _mapper = mapper;
-
-
         }
 
         public IActionResult Index()
@@ -28,8 +26,6 @@ namespace Movies.Controllers
 
             var movies = _movieRepository.GetAllMovies();
             var listToReturn = _mapper.Map<IEnumerable<DataLibrary.Models.Movie>, IEnumerable<MovieViewModel>>(movies);
-
-
             return View(listToReturn);
         }
 

@@ -9,7 +9,7 @@ using Xunit;
 
 namespace UnitTests
 {
-    public class DatabaseTests : IDisposable
+    public class DatabaseTests : IDisposable//disposing as this is indeendent of DI
     {
         private MovieDataContext _dbcontext;
         public DatabaseTests()

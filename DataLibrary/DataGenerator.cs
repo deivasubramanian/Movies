@@ -26,9 +26,7 @@ namespace DataLibrary
                     Duration = 2,
                     Popularity = 1,
                     Rating = 2,
-                    Comments = new List<Comments>() { new Comments { Author = "Deiva Subramanian", Text = "Good film", Date = DateTime.Now.AddDays(-1)},
-                                                                new Comments { Author = "Robert Brown", Text = "Not good", Date = DateTime.Now.AddDays(-2) } ,
-                                                                    new Comments { Author = "Kyran Watts", Text = "I liked it!!", Date = DateTime.Now.AddDays(-3) }}
+                    Comments = new List<Comments>()
 
                 },
                new Models.Movie
@@ -38,10 +36,7 @@ namespace DataLibrary
                    Duration = 3,
                    Popularity = 1,
                    Rating = 2,
-
-                   Comments = new List<Comments>() { new Comments { Author = "Rick Williams", Text = "Could be longer", Date = DateTime.Now.AddDays(-1)},
-                                                             new Comments { Author = "Dan Hill", Text = "Average viewing", Date = DateTime.Now.AddDays(-2) } ,
-                                                             new Comments { Author = "Logan Molehill", Text = "My favourite film of the year", Date = DateTime.Now.AddDays(-3) }}
+                   Comments = new List<Comments>()
                },
                new Models.Movie
                {
@@ -50,10 +45,8 @@ namespace DataLibrary
                    Popularity = 4,
                    Rating = 4,
                    Year = 2001,
-                   Comments = new List<Comments>() { new Comments { Author = "Maddy Clark", Text = "Could be longer", Date = DateTime.Now.AddDays(-1)},
-                                                             new Comments { Author = "Emma Hedges", Text = "Average viewing", Date = DateTime.Now.AddDays(-2) } ,
-                                                             new Comments { Author = "Logan Molehill", Text = "My favourite film of the year", Date = DateTime.Now.AddDays(-3) }}
-               });
+                   Comments = new List<Comments>()
+               }); ;
 
 
 

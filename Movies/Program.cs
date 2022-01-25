@@ -8,9 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 // Add services to the container.
-
+//make this singleton as its an in-memory database (by default it is a scoped service)
 builder.Services.AddDbContext<MovieDataContext>(options => options.UseInMemoryDatabase("Movies"), ServiceLifetime.Singleton, ServiceLifetime.Singleton);
 builder.Services.AddControllersWithViews();
+
+//these are transient as they only need to be used within the scope of a single request
 builder.Services.AddTransient<IMovieRepository, MovieRepository>(p => new MovieRepository(p.GetRequiredService<MovieDataContext>()));
 
 builder.Services.AddAutoMapper(typeof(MovieMapperProile));
@@ -22,7 +24,7 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<MovieDataContext>();
 
-    //4. Call the DataGenerator to create sample data
+    //smple data
     DataGenerator.Initialize(services);
 }
   

@@ -49,7 +49,7 @@ namespace UnitTests
                 Title = "Test",
                 Comments = new List<CommentsViewModel>
                 {
-                       new CommentsViewModel
+                     new CommentsViewModel
                     {
                         Author = "author1"
                     },
@@ -58,7 +58,7 @@ namespace UnitTests
                        Author = "author2"
                     }
                 }
-            }.ToExpectedObject();
+            }.ToExpectedObject();//;extension used with unit tests to compare objects
 
             var movie = _mapper.Map<MovieViewModel>(movieEntity);
 

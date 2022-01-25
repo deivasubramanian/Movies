@@ -13,8 +13,6 @@ $(".fancybutton").on("click", (e) => {
         Text: generateText(20),
         MovieID: e.target.dataset.movieid
 
-
-
     };
     console.log(JSON.stringify(model));
     fetch('/Movie/AddComment',
